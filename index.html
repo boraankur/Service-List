@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Our Services</h1>
+            <input type="text" id="searchBar" placeholder="Search for a service..." class="search-bar">
+        </header>
+
+        <table class="service-table">
+            <thead>
+                <tr>
+                    <th>Sl No.</th>
+                    <th>Service Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="serviceList">
+                <!-- Static list of services -->
+                <tr>
+                    <td>1</td>
+                    <td>Instant PAN Card (24 hours)</td>
+                    <td>
+                        <button onclick="showServiceDetails('Instant PAN Card (24 hours)', 'Aadhar Card, Aadhaar Linked Mobile No, Email ID', '24 Hours', '₹500')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>New PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('New PAN Card', 'Aadhaar, Passport Photo, Signature, Aadhaar Linked Mobile No, Email ID', '30 Days', '₹300')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Minor PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Minor PAN Card', 'Applicants Aadhaar, Two copy of Passport Photo of Applicants, Fathers Aadhaar, Application Form, Aadhaar Linked Mobile No, Email ID', '30 Days', '₹400')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Minor To Major PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Minor To Major PAN Card', 'Copy of Minor PAN, Aadhaar, Passport Photo, Signature, Aadhaar Linked Mobile No, Email ID', '30 Days', '₹350')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Correction Of PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Correction Of PAN Card', 'Old PAN, Aadhaar, Passport Photo, Signature, Aadhaar Linked Mobile No, Email ID', '30 Days', '₹350')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>E PAN to Physycal PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('E PAN to Physycal PAN Card', 'E-PAN, Aadhar, Passport Photo, Signature, Aadhaar Linked Mobile No, Email ID', '30 Days', '₹350')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Reprint Of PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Reprint Of PAN Card', 'Copy Of old PAN, Aadhaar, Aadhaar Linked Mobile No, Email ID', '30 Days', '₹350')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>PAN 2.O</td>
+                    <td>
+                        <button onclick="showServiceDetails('PAN 2.O', 'Comming Soon', 'Comming Soon', 'Comming Soon')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>PAN Card Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('PAN Card Download', 'PAN Number, Aadhaar Number, Aadhaar Linked Mobile No, Email ID', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Aadhaar PAN Linking</td>
+                    <td>
+                        <button onclick="showServiceDetails('Aadhaar PAN Linking', 'PAN Number, Aadhaar Number, Aadhaar Linked Mobile No', 'Instant', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Aadhaar Card Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('Aadhaar Card Download', 'Aadhaar Number, Aadhaar Linked Mobile No', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Aadhaar PVC Card (Original)</td>
+                    <td>
+                        <button onclick="showServiceDetails('Aadhaar PVC Card (Original)', 'Aadhaar No, Aadhaar Linked Mobile No', '15 Days', '₹150')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Aadhaar Address Update</td>
+                    <td>
+                        <button onclick="showServiceDetails('Aadhaar Address Update', 'Aadhaar, Aadhaar Linked Mobile No, Proof of Address: Caste Certificate, Bank Passbook, Voter ID etc', '30 Days', '₹200')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Aadhaar Documents Update</td>
+                    <td>
+                        <button onclick="showServiceDetails('Aadhaar Documents Update', 'Aadhaar, Aadhaar Linked Mobile No, Proof of Identity: PAN, Proof of Address: Voter ID', '30 Days', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Voter Card Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('Voter Card Download', 'Voter ID Number, Mobile Number', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Mobile Number Link With Voter Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Mobile Number Link With Voter Card', 'Voter ID, Mobile No', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Aadhaar Link With Voter Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Aadhaar Link With Voter Card', 'Voter ID, Aadhaar, Mobile No', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Voter Card Appy</td>
+                    <td>
+                        <button onclick="showServiceDetails('Voter Card Appy', 'Aadhaar, Aadhaar Linked Mobile No, Photo, Signature', 'Undefined', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Voter Card Correction</td>
+                    <td>
+                        <button onclick="showServiceDetails('Voter Card Correction', 'Old Voter ID, Aadhaar, Aadhaaar Linked Mobile No, Passport Photo, Signature', 'Undefined', '₹150')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Replace of Voter PVC Card (in case of lost)</td>
+                    <td>
+                        <button onclick="showServiceDetails('Replace of Voter PVC Card (in case of Damage/lost)', 'Old Voter ID, Mobile No', 'Undefined', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Issuance of Caste Certificate</td>
+                    <td>
+                        <button onclick="showServiceDetails('Issuance of Caste Certificate', 'Applicants Photo, Birth Certificate/Aaadhaar Card/PAN of Applicant, Caste certificate of father/Recommendation of authorized caste/tribe/community organization/Existing Caste Certificate etc ', '30 Days', '₹500')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Digitalising of Caste Certificate</td>
+                    <td>
+                        <button onclick="showServiceDetails('Digitalising of Caste Certificate', 'Applicant Photo, Aadhaar, PAN, Existing caste certificate, Aadhaar Linked Mobile No, Email ID', '30 Days', '₹500')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Registration of employment seeker in Employment Exchange</td>
+                    <td>
+                        <button onclick="showServiceDetails('Registration of employment seeker in Employment Exchange', 'Aadhaar, HSLC Admit card, Certified Copy of Electoral Roll/EPIC (either self or parents), Copy of caste certificate, Educational Qualification Certificate & Marksheet, Signature, Mobile No, Email ID', 'Instant', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Re-registration of employment seeker in Employment Exchange</td>
+                    <td>
+                        <button onclick="showServiceDetails('Re-registration of employment seeker in Employment Exchange', 'Aadhaar, HSLC Admit card, Certified Copy of Electoral Roll/EPIC (either self or parents), Copy of caste certificate, Educational Qualification Certificate & Marksheet, Signature, Mobile No, Email ID', 'Instant', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Renewal of Registration Card of employment seeker in Employment Exchange</td>
+                    <td>
+                        <button onclick="showServiceDetails('Renewal of Registration Card of employment seeker in Employment Exchange', 'Aadhaar, HSLC Admit card, Certified Copy of Electoral Roll/EPIC (either self or parents), Copy of caste certificate, Educational Qualification Certificate & Marksheet, Signature, Mobile No, Email ID', 'Instant', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Income Certificate</td>
+                    <td>
+                        <button onclick="showServiceDetails('Income Certificate', 'Aadhaar, PAN, Land Revenue Receipt, Salary Slip [Optional]', '30 Days', '₹500')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Caste Certificate Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('Caste Certificate Download', 'Caste Certificate Number', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>PRC Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('PRC Download', 'PRC Number', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                
+                <!-- Add other services similarly -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for service details -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="service-card">
+                <h2 id="serviceTitle"></h2>
+                <p><strong>Required Documents:</strong> <span id="serviceDocuments"></span></p>
+                <p><strong>Stipulated Time Limit:</strong> <span id="stipulatedTime"></span></p>
+                <p><strong>Charge:</strong> <span id="servicePrice"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
