@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Our Services</h1>
+            <input type="text" id="searchBar" placeholder="Search for a service..." class="search-bar">
+        </header>
+
+        <table class="service-table">
+            <thead>
+                <tr>
+                    <th>Sl No.</th>
+                    <th>Service Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="serviceList">
+                <!-- Static list of services -->
+                <tr>
+                    <td>1</td>
+                    <td>Instant PAN Card (24 hours)</td>
+                    <td>
+                        <button onclick="showServiceDetails('Instant PAN Card', 'Aadhaar Card, Aadhaar Linked Mobile No, Email ID', '24 Hours', '₹500')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>New PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('New PAN Card', 'Aadhaar Card, Aadhaar Linked Mobile No, Email ID, Passport Size Photograph, Signature', '30 Days', '₹300')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Minor PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Minor PAN Card', 'Aadhaar Card, Aadhaar Linked Mobile No, Email ID, Passport Size Photograph, Fathers Aadhaar, Signature', '30 Days', '₹350')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Minor to Major PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Minor to Major PAN Card', 'Minor PAN Card, Aadhaar Card, Aadhaar Linked Mobile No, Email ID, Passport Size Photograph, Signature', '30 Days', '₹350')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Correction of PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Correction of PAN Card', 'Old PAN Card, Aadhaar Card, Aadhaar Linked Mobile No, Email ID, Passport Size Photograph, Signature', '30 Days', '₹350')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>E-PAN to Physical PAN</td>
+                    <td>
+                        <button onclick="showServiceDetails('E-PAN to Physical PAN', 'E-PAN, Aadhaar Card, Aadhaar Linked Mobile No, Email ID, Passport Size Photograph, Signature', '30 Days', '₹350')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Reprint of PAN Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Reprint of PAN Card', 'Old PAN Card, Aadhaar Card, Aadhaar Linked Mobile No, Email ID, Passport Size Photograph, Signature', '30 Days', '₹350')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>PAN 2.0</td>
+                    <td>
+                        <button onclick="showServiceDetails('PAN 2.0', 'Comming Soon', 'Comming Soon', '₹Comming Soon')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>PAN Card Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('PAN Card Download', 'PAN Card Number, Aadhaar Card, Aadhaar Linked Mobile No, Email ID', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>PAN & Aadhaar Link</td>
+                    <td>
+                        <button onclick="showServiceDetails('PAN & Aadhaar Link', 'PAN Card, Aadhaar Card, Aadhaar Linked Mobile No, Email ID', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Aadhaar Document Update</td>
+                    <td>
+                        <button onclick="showServiceDetails('Aadhaar Document Update', 'Aadhaar Card, Aadhaar Linked Mobile No, Proof of Identity, Proof of Address', '30 Days', '₹200')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Aadhaar Address Update</td>
+                    <td>
+                        <button onclick="showServiceDetails('Aadhaar Address Update', 'Aadhaar Card, Aadhaar Linked Mobile No, Proof of Address', '30 Days', '₹250')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Aadhaar Card Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('Aadhaar Card Download', 'Aadhaar Number, Aadhaar Linked Mobile No', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Order Aadhaar PVC(Original)</td>
+                    <td>
+                        <button onclick="showServiceDetails('Order Aadhaar PVC(Original)', 'Aadhaar Card, Aadhaar Linked Mobile No', '14 Days', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Aadhaar Seeding With Bank Account</td>
+                    <td>
+                        <button onclick="showServiceDetails('Aadhaar Seeding With Bnak Account', 'Aadhaar Card, Aadhaar Linked Mobile No, Account Number to be Linked with Aadhaar', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Bank Seeding Status</td>
+                    <td>
+                        <button onclick="showServiceDetails('Bank Seeding Status', 'Aadhaar Card, Aadhaar Linked Mobile No', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>New Voter Card Application</td>
+                    <td>
+                        <button onclick="showServiceDetails('New Voter Card Application', 'Aadhaar Card, Aadhaar Linked Mobile No, PAN Card, Birth Certificate & Fathers Voter Card', 'Depends on office works', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Correction of Voter Card</td>
+                    <td>
+                        <button onclick="showServiceDetails('Correction of Voter Card', 'Old Voter Card, Aadhaar Card, Aadhaar Linked Mobile No', 'Depends on office works', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Voter & Aadhaar Link</td>
+                    <td>
+                        <button onclick="showServiceDetails('Voter & Aadhaar Link', 'Voter Card, Aadhaar Card, Aadhaar Linked Mobile No', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Voter & Mobile Number Link</td>
+                    <td>
+                        <button onclick="showServiceDetails('Voter & Mobile Number Link', 'Voter Card, Mobile Number to be Linked', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Voter Card Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('Voter Card Download', 'Voter Card, Mobile Number Linked With Voter Card', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>ABHA Card Apply</td>
+                    <td>
+                        <button onclick="showServiceDetails('ABHA Card', 'Aadhaar Card, Aadhaar Linked Mobile No', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>ABHA Card Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('ABHA Card Download', 'Aadhaar Card, Aadhaar Linked Mobile No', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Ayushman Card Apply</td>
+                    <td>
+                        <button onclick="showServiceDetails('Ayushman Card Apply', 'Aadhaar Card, Aadhaar Linked Mobile No, Ration Card/Family ID', '24 Hours', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Ayushman Card Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('Ayushman Card Download', 'Aadhaar Card, Aadhaar Linked Mobile No, Ration Card/Family ID', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>ABC ID/APAAR ID Apply</td>
+                    <td>
+                        <button onclick="showServiceDetails('ABC ID/APAAR ID Apply', 'Aadhaar Card, Aadhaar Linked Mobile No', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>ABC ID/APAAR ID Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('ABC ID/APAAR ID Download', 'Aadhaar Card, Aadhaar Linked Mobile No', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Issuance of Caste Certificate</td>
+                    <td>
+                        <button onclick="showServiceDetails('Issuance of Caste Certificate', 'Applicants Photo[Mandatory], Aadhaar Card of Applicant [Mandatory], Caste certificate of father or Recommendation Letter', '30 Days', '₹300')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Digitalising of Caste Certificate</td>
+                    <td>
+                        <button onclick="showServiceDetails('Digitalising of Caste Certificate', 'Applicants Photo[Mandatory], Aadhaar Card of Applicant [Mandatory], Existing Caste Certificate', '30 Days', '₹300')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Caste Certificate Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('Caste Certificate Download', 'Application Acknowledgement', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Issuance of Income Certificate</td>
+                    <td>
+                        <button onclick="showServiceDetails('Issuance of Income Certificate', 'Aadhaar Card, Ration Card, Gaon Burha Certificate', '7 Days', '₹300')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Income Certificate Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('Income Certificate Download', 'Application Acknowledgement', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Registration of employment seeker in Employment Exchange</td>
+                    <td>
+                        <button onclick="showServiceDetails('Registration of employment seeker in Employment Exchange', 'Photo, Aadhaar, Voter Card(either self or parents), All Qualification Documents, Copy of caste certificate, Signature', 'Instant', '₹100')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Re-Registration of employment seeker in Employment Exchange</td>
+                    <td>
+                        <button onclick="showServiceDetails('Re-Registration of employment seeker in Employment Exchange', 'Existing Registration Card, Photo, Aadhaar, Voter Card(either self or parents), All Qualification Documents, Copy of caste certificate, Signature', 'Instant', '₹150')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Renewal Registration of employment seeker in Employment Exchange</td>
+                    <td>
+                        <button onclick="showServiceDetails('Renewal Registration of employment seeker in Employment Exchange', 'A valid Registration Card which is expired and is not crossed 60 days from the date of expiry, Photo, Aadhaar, Voter Card(either self or parents), All Qualification Documents, Copy of caste certificate, Signature', 'Instant', '₹150')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Employment Exchange Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('Employment Exchange Download', 'Application Acknowledgement', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Issuance of PRC</td>
+                    <td>
+                        <button onclick="showServiceDetails('Issuance of PRC', 'Photo, Aadhaar, Birth Certificate, HSLC Certificate/Admit Card, voters list, NRC Documents, Land Revenue Paid receipt, Copy of PRC of any member of family of the Applicant stating relationship, if any ', '30 Days', '₹350')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>PRC Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('PRC Download', 'Application Acknowledgement', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>E-District Certificate Download</td>
+                    <td>
+                        <button onclick="showServiceDetails('E-District Certificate Download', 'Application Acknowledgement', 'Instant', '₹50')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Any Kind of Online Application</td>
+                    <td>
+                        <button onclick="showServiceDetails('Any Kind of Online Application', 'As mentioned in the notification', 'Instant', '₹Online Deduction + ₹100')">View Details</button>
+                    </td>
+                </tr>
+                <!-- Add other services similarly -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for service details -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="service-card">
+                <h2 id="serviceTitle"></h2>
+                <p><strong>Required Documents:</strong> <span id="serviceDocuments"></span></p>
+                <p><strong>Stipulated Time Limit:</strong> <span id="stipulatedTime"></span></p>
+                <p><strong>Application Fee:</strong> <span id="servicePrice"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
